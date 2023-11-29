@@ -3284,6 +3284,7 @@ input, select, textarea {
 /* Intro */
 
 	#intro {
+		position: relative;
 		color: #ffffff;
 		padding: 8rem 4rem 6rem 4rem ;
 		-moz-align-items: center;
@@ -3311,8 +3312,20 @@ input, select, textarea {
 		text-align: center;
 		z-index: 1;
 		min-height: 100vh;
+		overflow: hidden;
 	}
 
+		#video-bg {
+			position: absolute;
+			top: 0;
+			left: 0;
+			min-width: 100%;
+			min-height: 100%;
+			width: auto;
+			height: auto;
+			z-index: -1;
+		}
+		
 		#intro input, #intro select, #intro textarea {
 			color: #ffffff;
 		}
@@ -3432,7 +3445,7 @@ input, select, textarea {
 				opacity: 1;
 				visibility: visible;
 			}
-
+			
 		body.is-preload #intro {
 			-moz-transform: translateY(2rem);
 			-webkit-transform: translateY(2rem);
@@ -3452,7 +3465,7 @@ input, select, textarea {
 		@media screen and (max-width: 980px) {
 
 			#intro {
-				padding: 4rem 4rem 2rem 4rem ;
+				padding: 4rem 4rem 2rem 4rem;
 				min-height: 90vh;
 			}
 
